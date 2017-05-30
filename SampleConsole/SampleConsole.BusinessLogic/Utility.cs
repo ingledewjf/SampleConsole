@@ -1,6 +1,7 @@
 ﻿namespace SampleConsole.BusinessLogic
 {
     using System;
+    using System.CodeDom;
     using System.Diagnostics;
     using System.Drawing;
 
@@ -42,16 +43,22 @@
         public override bool Equals(object obj)
         {
             DoublePoint? other = obj as DoublePoint?;
-            if (other.HasValue)
-            {
-                return Equals(other);
-            }
-            return false;
+            return other.HasValue && X.Equals(other.Value.X) && Y.Equals(other.Value.Y);
         }
 
         public bool Equals(DoublePoint other)
         {
             return X.Equals(other.X) && Y.Equals(other.Y);
+        }
+
+        public static bool operator ==(DoublePoint left, DoublePoint right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(DoublePoint left, DoublePoint right)
+        {
+            return !left.Equals(right);
         }
 
         public override int GetHashCode()
