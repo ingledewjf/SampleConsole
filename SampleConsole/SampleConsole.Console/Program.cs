@@ -25,6 +25,7 @@
             // draw a recursive tree
             Tree tree = new Tree(graphics, brush);
             tree.Branch(0, 250.0, 50.0, (Math.PI * 0.5), 90.0, 10.0, height, 8);
+            // todo add modification from the console to produce different trees
 
             form.ShowDialog();
         }
