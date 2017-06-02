@@ -27,6 +27,7 @@ namespace SampleConsole.BusinessLogic
         public void Branch(int currDepth, double x, double y, double angle, double length, double width, int height, int maxDepth)
         {
             Utility.DrawLine(_target, _brush, x, y, angle, length, width, height);
+
             if (currDepth <= maxDepth)
             {
                 DoublePoint newPoint = Utility.GetEndpoint(x, y, angle, length);
