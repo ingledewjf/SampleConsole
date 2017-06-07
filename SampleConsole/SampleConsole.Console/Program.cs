@@ -8,9 +8,8 @@ namespace SampleConsole.Console
 
     class Program
     {
-        private static const int width = 500;
-
-        private static const int height = 500;
+        private const int width = 500;
+        private const int height = 500;
     
         static void Main(string[] args)
         {

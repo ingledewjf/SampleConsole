@@ -31,14 +31,17 @@
 
     public struct DoublePoint
     {
+	private readonly double _x;
+	private readonly double _y;
+
         public DoublePoint(double x, double y)
         {
-            X = x;
-            Y = y;
+            _x = x;
+            _y = y;
         }
 
-        public double X { get; }
-        public double Y { get; }
+        public double X { get { return _x; } }
+        public double Y { get { return _y; } }
 
         public override bool Equals(object obj)
         {
