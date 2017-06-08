@@ -20,6 +20,7 @@ namespace SampleConsole.Console
             Graphics graphics = Graphics.FromImage(image);
             SolidBrush brush = new SolidBrush(Color.FromArgb(0,0,0));
 
+	    // new commen
             box.Image = image;
             form.Controls.Add(box);
 
